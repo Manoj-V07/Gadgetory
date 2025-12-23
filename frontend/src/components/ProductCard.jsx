@@ -27,7 +27,7 @@ const ProductCard = ({
 
     try {
       await axios.post(
-        "http://localhost:3000/carts",
+        "https://gadgetory-mzvj.onrender.com/carts",
         { productId: id, quantity: 1 },
         {
           headers: { Authorization: `Bearer ${token}` },
@@ -44,7 +44,7 @@ const ProductCard = ({
 
     try {
       await axios.delete(
-        `http://localhost:3000/carts/${cartItemId}`,
+        `https://gadgetory-mzvj.onrender.com/carts/${cartItemId}`,
         {
           headers: { Authorization: `Bearer ${token}` },
         }

@@ -12,7 +12,7 @@ const Products = () => {
   useEffect(() => {
     
     const fetchProducts = async () => {
-        const response = await axios.get('http://localhost:3000/products')
+        const response = await axios.get('https://gadgetory-mzvj.onrender.com/products')
         console.log('Products from API:', response.data);
         setProductsData(response.data);
     };

@@ -35,7 +35,7 @@ const AddProduct = () => {
           event.preventDefault()
           
           try {
-              const response = await axios.post('http://localhost:3000/products', {
+              const response = await axios.post('https://gadgetory-mzvj.onrender.com/products', {
                   id: Date.now(),
                   title: name,
                   description,

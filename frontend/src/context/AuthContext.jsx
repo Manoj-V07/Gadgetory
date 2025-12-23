@@ -42,7 +42,7 @@ export const AuthProvider = ({ children }) => {
 
   const register = async (email, password, role = 'user') => {
     try {
-      const response = await fetch(`http://localhost:3000/auth/register`, {
+      const response = await fetch(`https://gadgetory-mzvj.onrender.com/auth/register`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -76,7 +76,7 @@ export const AuthProvider = ({ children }) => {
 
   const login = async (email, password) => {
     try {
-      const response = await fetch(`http://localhost:3000/auth/login`, {
+      const response = await fetch(`https://gadgetory-mzvj.onrender.com/auth/login`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
