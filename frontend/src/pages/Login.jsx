@@ -37,23 +37,23 @@ const Login = () => {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center p-4">
-      <div className="w-full max-w-md bg-white rounded-2xl shadow-2xl overflow-hidden">
+    <div className="min-h-screen flex items-center justify-center p-4" style={{backgroundColor: 'rgb(3, 7, 18)'}}>
+      <div className="w-full max-w-md bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 rounded-2xl shadow-2xl overflow-hidden border border-purple-700/30">
 
         {/* Form Container */}
         <div className="p-8">
-          <h2 className="font-bold text-center text-2xl mb-8 text-gray-800">
+          <h2 className="font-bold text-center text-2xl mb-8 text-white">
             {isLogin ? 'Login' : 'Create Account'}
           </h2>
           
           <form onSubmit={handleSubmit} className="space-y-5">
             {/* Email Input */}
             <div>
-              <label className="block text-sm font-semibold text-gray-700 mb-2">Email Address</label> 
+              <label className="block text-sm font-semibold text-gray-200 mb-2">Email Address</label> 
               <input 
                 type="email" 
                 placeholder="you@example.com" 
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition" 
+                className="w-full px-4 py-3 bg-slate-800/50 border border-purple-700/30 text-white placeholder-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition" 
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
@@ -62,11 +62,11 @@ const Login = () => {
             
             {/* Password Input */}
             <div>
-              <label className="block text-sm font-semibold text-gray-700 mb-2">Password</label>
+              <label className="block text-sm font-semibold text-gray-200 mb-2">Password</label>
               <input 
                 type="password" 
                 placeholder="••••••••" 
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition" 
+                className="w-full px-4 py-3 bg-slate-800/50 border border-purple-700/30 text-white placeholder-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition" 
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
@@ -76,9 +76,9 @@ const Login = () => {
             {/* Role Selection - Register Only */}
             {!isLogin && (
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">Account Type</label>
+                <label className="block text-sm font-semibold text-gray-200 mb-2">Account Type</label>
                 <select 
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition bg-white"
+                  className="w-full px-4 py-3 bg-slate-800/50 border border-purple-700/30 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition"
                   value={role}
                   onChange={(e) => setRole(e.target.value)}
                 >
@@ -97,8 +97,8 @@ const Login = () => {
             </button>
           </form>
 
-          <div className="mt-8 pt-6 text-center">
-            <p className="text-gray-600 text-sm mb-4">
+          <div className="mt-8 pt-6 text-center border-t border-purple-700/30">
+            <p className="text-gray-300 text-sm mb-4">
               {isLogin ? "Don't have an account? " : "Already have an account? "}
             </p>
             <button
