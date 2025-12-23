@@ -5,7 +5,16 @@ const router = express.Router()
 router.get('/' , async (req,res) => {
     try {
         const products = await Product.find()
-        res.status(200).json(products)
+        // Normalize the response to ensure 'title' field exists
+        const normalizedProducts = products.map(product => {
+            const productObj = product.toObject()
+            // If 'name' exists but 'title' doesn't, use 'name' as 'title'
+            if (productObj.name && !productObj.title) {
+                productObj.title = productObj.name
+            }
+            return productObj
+        })
+        res.status(200).json(normalizedProducts)
     }
     catch (error) {
         res.status(500).json({ message : 'Error fetching product' , error})
@@ -19,7 +28,12 @@ router.get('/:id' , async (req,res) => {
         if (!product) {
             return res.status(404).json({ message: 'Product not found' });
         }
-        res.status(200).json({ message : 'Product fetched successfully' , product})
+        // Normalize the response to ensure 'title' field exists
+        const productObj = product.toObject()
+        if (productObj.name && !productObj.title) {
+            productObj.title = productObj.name
+        }
+        res.status(200).json({ message : 'Product fetched successfully' , product: productObj})
     } catch (error) {
         res.status(500).json({ message : 'Error fetching product' , error})
     }

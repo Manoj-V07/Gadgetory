@@ -59,11 +59,11 @@ const AddProduct = () => {
 
   return (
     <div className="min-h-screen py-12 px-4" style={{backgroundColor: 'rgb(3, 7, 18)'}}>
-      <div className="max-w-2xl mx-auto bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 rounded-2xl shadow-2xl overflow-hidden border border-purple-700/30">
+      <div className="max-w-2xl mx-auto bg-gray-950 rounded-2xl shadow-2xl overflow-hidden border border-gray-800">
         {/* Header */}
-        <div className="bg-gradient-to-r from-purple-600 to-purple-700 p-8 text-center">
+        <div className="bg-gray-800 p-8 text-center border-b border-gray-700">
           <h1 className="text-3xl font-bold text-white mb-2">Add New Product</h1>
-          <p className="text-purple-100">Create a new product listing for your store</p>
+          <p className="text-gray-300">Create a new product listing for your store</p>
         </div>
 
         {/* Form Container */}
@@ -75,7 +75,7 @@ const AddProduct = () => {
               <input
                 type="text"
                 placeholder="Enter product name"
-                className="w-full px-4 py-3 bg-slate-800/50 border border-purple-700/30 text-white placeholder-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition"
+                className="w-full px-4 py-3 bg-gray-800 border border-gray-700 text-white placeholder-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-600 focus:border-transparent transition"
                 value={name}
                 onChange={handleChangeName}
                 required
@@ -87,7 +87,7 @@ const AddProduct = () => {
               <label className="block text-sm font-bold text-gray-200 mb-3">Description</label>
               <textarea
                 placeholder="Enter product description"
-                className="w-full px-4 py-3 bg-slate-800/50 border border-purple-700/30 text-white placeholder-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition resize-none"
+                className="w-full px-4 py-3 bg-gray-800 border border-gray-700 text-white placeholder-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-600 focus:border-transparent transition resize-none"
                 rows="4"
                 value={description}
                 onChange={handleChangeDescription}
@@ -101,7 +101,7 @@ const AddProduct = () => {
               <input
                 type="url"
                 placeholder="Enter product image URL"
-                className="w-full px-4 py-3 bg-slate-800/50 border border-purple-700/30 text-white placeholder-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition"
+                className="w-full px-4 py-3 bg-gray-800 border border-gray-700 text-white placeholder-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-600 focus:border-transparent transition"
                 value={image}
                 onChange={handleChangeImage}
                 required
@@ -115,7 +115,7 @@ const AddProduct = () => {
                 <input
                   type="number"
                   placeholder="Enter original price"
-                  className="w-full px-4 py-3 bg-slate-800/50 border border-purple-700/30 text-white placeholder-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition"
+                  className="w-full px-4 py-3 bg-gray-800 border border-gray-700 text-white placeholder-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-600 focus:border-transparent transition"
                   value={originalPrice}
                   onChange={handleChangeOriginalPrice}
                   required
@@ -127,7 +127,7 @@ const AddProduct = () => {
                 <input
                   type="number"
                   placeholder="Enter discounted price"
-                  className="w-full px-4 py-3 bg-slate-800/50 border border-purple-700/30 text-white placeholder-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition"
+                  className="w-full px-4 py-3 bg-gray-800 border border-gray-700 text-white placeholder-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-600 focus:border-transparent transition"
                   value={discountedPrice}
                   onChange={handleChangeDiscountPrice}
                   required
@@ -138,7 +138,7 @@ const AddProduct = () => {
             {/* Submit Button */}
             <button
               type="submit"
-              className="w-full bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white font-bold py-4 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl active:scale-95 mt-8"
+              className="w-full bg-white text-gray-900 font-bold py-4 rounded-lg transition-all duration-300 shadow-lg hover:bg-gray-200 active:scale-95 mt-8"
             >
               Add Product
             </button>

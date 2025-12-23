@@ -38,7 +38,7 @@ const Login = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center p-4" style={{backgroundColor: 'rgb(3, 7, 18)'}}>
-      <div className="w-full max-w-md bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 rounded-2xl shadow-2xl overflow-hidden border border-purple-700/30">
+      <div className="w-full max-w-md bg-gray-950 rounded-2xl shadow-2xl overflow-hidden border border-gray-800">
 
         {/* Form Container */}
         <div className="p-8">
@@ -53,7 +53,7 @@ const Login = () => {
               <input 
                 type="email" 
                 placeholder="you@example.com" 
-                className="w-full px-4 py-3 bg-slate-800/50 border border-purple-700/30 text-white placeholder-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition" 
+                className="w-full px-4 py-3 bg-gray-800 border border-gray-700 text-white placeholder-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-600 focus:border-transparent transition" 
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
@@ -66,7 +66,7 @@ const Login = () => {
               <input 
                 type="password" 
                 placeholder="••••••••" 
-                className="w-full px-4 py-3 bg-slate-800/50 border border-purple-700/30 text-white placeholder-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition" 
+                className="w-full px-4 py-3 bg-gray-800 border border-gray-700 text-white placeholder-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-600 focus:border-transparent transition" 
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
@@ -78,7 +78,7 @@ const Login = () => {
               <div>
                 <label className="block text-sm font-semibold text-gray-200 mb-2">Account Type</label>
                 <select 
-                  className="w-full px-4 py-3 bg-slate-800/50 border border-purple-700/30 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition"
+                  className="w-full px-4 py-3 bg-gray-800 border border-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-600 focus:border-transparent transition"
                   value={role}
                   onChange={(e) => setRole(e.target.value)}
                 >
@@ -91,13 +91,13 @@ const Login = () => {
             <button 
               type="submit"
               disabled={loading}
-              className="w-full bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white font-bold py-3 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed mt-6"
+              className="w-full bg-white text-gray-900 font-bold py-3 rounded-lg transition-all duration-300 shadow-md hover:bg-gray-200 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed mt-6"
             >
               {loading ? 'Processing...' : (isLogin ? 'Sign In' : 'Create Account')}
             </button>
           </form>
 
-          <div className="mt-8 pt-6 text-center border-t border-purple-700/30">
+          <div className="mt-8 pt-6 text-center border-t border-gray-800">
             <p className="text-gray-300 text-sm mb-4">
               {isLogin ? "Don't have an account? " : "Already have an account? "}
             </p>
@@ -107,7 +107,7 @@ const Login = () => {
                 setEmail('')
                 setPassword('')
               }}
-              className="text-purple-600 hover:text-purple-700 font-semibold text-sm transition"
+              className="text-gray-200 hover:text-white font-semibold text-sm transition"
               type="button"
             >
               {isLogin ? 'Create New Account' : 'Sign In Instead'}
