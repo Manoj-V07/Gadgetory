@@ -42,7 +42,7 @@ export const AuthProvider = ({ children }) => {
 
   const register = async (email, password, role = 'user') => {
     try {
-      const response = await fetch(`https://gadgetory-mzvj.onrender.com/auth/register`, {
+      const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/auth/register`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -76,7 +76,7 @@ export const AuthProvider = ({ children }) => {
 
   const login = async (email, password) => {
     try {
-      const response = await fetch(`https://gadgetory-mzvj.onrender.com/auth/login`, {
+      const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/auth/login`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

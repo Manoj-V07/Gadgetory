@@ -27,7 +27,7 @@ const ProductCard = ({
 
     try {
       await axios.post(
-        "https://gadgetory-mzvj.onrender.com/carts",
+        `${import.meta.env.VITE_API_BASE_URL}/carts`,
         { productId: id, quantity: 1 },
         {
           headers: { Authorization: `Bearer ${token}` },
@@ -44,7 +44,7 @@ const ProductCard = ({
 
     try {
       await axios.delete(
-        `https://gadgetory-mzvj.onrender.com/carts/${cartItemId}`,
+        `${import.meta.env.VITE_API_BASE_URL}/carts/${cartItemId}`,
         {
           headers: { Authorization: `Bearer ${token}` },
         }

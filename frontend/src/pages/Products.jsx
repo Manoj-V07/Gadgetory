@@ -12,7 +12,7 @@ const Products = () => {
   useEffect(() => {
     
     const fetchProducts = async () => {
-        const response = await axios.get('https://gadgetory-mzvj.onrender.com/products')
+        const response = await axios.get(`${import.meta.env.VITE_API_BASE_URL}/products`)
         console.log('Products from API:', response.data);
         setProductsData(response.data);
     };

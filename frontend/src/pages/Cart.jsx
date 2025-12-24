@@ -16,7 +16,7 @@ const Cart = () => {
   const fetchCart = async () => {
     try {
       setLoading(true);
-      const response = await fetch("https://gadgetory-mzvj.onrender.com/carts", {
+      const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/carts`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       const data = await response.json();
@@ -30,7 +30,7 @@ const Cart = () => {
 
   const removeFromCart = async (productId) => {
     try {
-      await fetch(`https://gadgetory-mzvj.onrender.com/carts/${productId}`, {
+      await fetch(`${import.meta.env.VITE_API_BASE_URL}/carts/${productId}`, {
         method: "DELETE",
         headers: { Authorization: `Bearer ${token}` },
       });
@@ -43,7 +43,7 @@ const Cart = () => {
   const updateQuantity = async (productId, qty) => {
     if (qty < 1) return removeFromCart(productId);
     try {
-      await fetch(`https://gadgetory-mzvj.onrender.com/carts/${productId}`, {
+      await fetch(`${import.meta.env.VITE_API_BASE_URL}/carts/${productId}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",

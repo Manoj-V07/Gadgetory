@@ -21,7 +21,7 @@ const Order = () => {
 
   const fetchOrders = async () => {
     try {
-      const response = await fetch("https://gadgetory-mzvj.onrender.com/orders", {
+      const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/orders`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       const data = await response.json();
@@ -48,7 +48,7 @@ const Order = () => {
 
     try {
       setLoading(true);
-      const response = await fetch("https://gadgetory-mzvj.onrender.com/orders", {
+      const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/orders`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

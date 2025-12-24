@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import ProductCard from "../components/ProductCard";
 
 const Home = () => {
@@ -70,7 +71,7 @@ const Home = () => {
               Shop smarter with the latest technology at the best value.
             </p>
 
-            <button
+            <Link to="/products"
               className="
                 bg-white text-gray-900
                 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold
@@ -80,8 +81,8 @@ const Home = () => {
                 transition-all
               "
             >
-              Shop Now
-            </button>
+              Shop Now 
+            </Link>
           </div>
 
           {/* IMAGE */}

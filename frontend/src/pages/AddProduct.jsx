@@ -35,7 +35,7 @@ const AddProduct = () => {
           event.preventDefault()
           
           try {
-              const response = await axios.post('https://gadgetory-mzvj.onrender.com/products', {
+              const response = await axios.post(`${import.meta.env.VITE_API_BASE_URL}/products`, {
                   id: Date.now(),
                   title: name,
                   description,
